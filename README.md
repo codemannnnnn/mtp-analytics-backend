@@ -34,3 +34,7 @@ Migrations
 - npm i
 - knex migrate:make <example_tbl>
 - knex migrate:latest
+
+Starting local dev server
+
+- npm run server
