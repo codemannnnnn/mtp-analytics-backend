@@ -25,6 +25,6 @@
 
 #### Starting Info
 
-npm i
-knex migrate:make <example_tbl>
-knex migrate:latest
+- npm i
+- knex migrate:make <example_tbl>
+- knex migrate:latest
