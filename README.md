@@ -25,6 +25,12 @@
 
 #### Starting Info
 
+Starting the datbase and pgadmin
+
+- docker-compose up -d
+
+Migrations
+
 - npm i
 - knex migrate:make <example_tbl>
 - knex migrate:latest
