@@ -38,3 +38,10 @@ Migrations
 Starting local dev server
 
 - npm run server
+
+#### Cloning repo & creating new repo
+
+- git clone https://github.com/codemannnnnn/api-init.git
+- create new repo on github
+- git remote set-url origin http://github.com/YOU/YOUR_REPO
+- push new changes to new repo
