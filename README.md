@@ -25,7 +25,7 @@
 
 #### Starting Info
 
-Starting the datbase and pgadmin
+Starting the database and pgadmin
 
 - docker-compose up -d
 
