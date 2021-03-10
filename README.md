@@ -18,8 +18,8 @@
 ### Postgres Connection
 
 - HOST: pg
-- USER: docker
 - PORT: 5432
+- USER: docker
 - PASSWORD: docker
 - DATABASE: postgresdb
 
