@@ -2,9 +2,9 @@
 
 ### Postgres DB and PGAdmin containers included in docker-compose.yml file
 
-### Express to serve the API routes.
+### Express to serve the API routes
 
-### Docker running two containers.
+### Docker running two containers
 
 - pg-starter
 - pgadmin
