@@ -39,6 +39,11 @@ Starting local dev server
 
 - npm run server
 
+DOTENV file
+
+- DATABASE_URL=postgres://docker:docker@127.0.0.1:5400/postgresdb
+- PORT=8005
+
 #### Cloning repo & creating new repo
 
 - git clone https://github.com/codemannnnnn/api-init.git
