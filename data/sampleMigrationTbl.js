@@ -1,36 +1,23 @@
 exports.up = function (knex) {
   return knex.schema
+    .createTable("example", (tbl) => {
+      tbl.string("id").notNullable().unique().primary();
+      tbl.string("firstname");
+      tbl.string("lastname");
+      tbl.string("email");
+    })
+
     .createTable("users", function (table) {
-      table.increments().primary();
-      table.string("name", 255).notNullable();
-      table.string("email", 255).notNullable();
-      table.string("password", 255).notNullable();
-      table.boolean("account_verified").notNullable().defaultTo(false);
-      table.timestamp("created_at").defaultTo(knex.fn.now());
-      table.timestamp("updated_at").defaultTo(knex.fn.now());
-    })
-    .createTable("posts", function (table) {
-      table.increments().primary();
-      table.string("title", 255).notNullable();
-      table.string("body", 255).notNullable();
-      table.timestamp("created_at").defaultTo(knex.fn.now());
-      table.timestamp("updated_at").defaultTo(knex.fn.now());
-      table.integer("user_id").references("id").inTable("users");
-    })
-    .createTable("comments", function (table) {
-      table.increments().primary();
-      table.string("comment", 255).notNullable();
-      table.timestamp("created_at").defaultTo(knex.fn.now());
-      table.timestamp("updated_at").defaultTo(knex.fn.now());
-      table.integer("user_id").references("id").inTable("users");
-      table.string("user_name", 255).notNullable();
-      table.integer("post_id").references("id").inTable("posts");
+      table.string("id").notNullable().unique().primary();
+      table.string("firstname");
+      table.string("lastname");
+      table.string("email");
+      table.string("avatarUrl");
+      table.string("name");
+      table.timestamps(true, true);
     });
 };
 
 exports.down = function (knex) {
-  return knex.schema
-    .dropTableIfExists("comments")
-    .dropTableIfExists("posts")
-    .dropTableIfExists("users");
+  return knex.schema.dropTableIfExists("users").dropTableIfExists("example");
 };
