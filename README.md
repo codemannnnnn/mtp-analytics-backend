@@ -1,4 +1,4 @@
-# Backend API template using Postgres DB
+# Backend API template using Postgres DB (Open Source)
 
 ### Postgres DB and PGAdmin containers included in docker-compose.yml file
 
