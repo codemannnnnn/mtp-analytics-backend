@@ -10,7 +10,10 @@ lerna-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 
+/data/pg
+/data/pgadmin
 
+/docker
 # Runtime data
 pids
 *.pid
