@@ -10,6 +10,8 @@ exports.seed = function (knex) {
           businessName: "Walmart",
           businessEmail: "walmart@walmart.com",
           businessAddress: "123 West Ave",
+          businessPhone: 1111111111,
+          businessPoc: "John Doe",
           phoneLines: 30,
           phoneLinesMonthlyCost: 2000,
           phoneLinesProvider: "Blackfoot",

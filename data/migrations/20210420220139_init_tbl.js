@@ -14,6 +14,8 @@ exports.up = function (knex) {
       tbl.string("businessName").notNullable().unique();
       tbl.string("businessEmail");
       tbl.string("businessAddress");
+      tbl.string("businessPhone");
+      tbl.string("businessPoc");
       tbl.bigInteger("phoneLines");
       tbl.bigInteger("phoneLinesMonthlyCost");
       tbl.string("phoneLinesProvider");
