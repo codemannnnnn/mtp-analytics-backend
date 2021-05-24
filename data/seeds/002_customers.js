@@ -36,7 +36,7 @@ exports.seed = function (knex) {
           businessAddress: "123 East Ave",
           businessPhone: 1111111111,
           businessPoc: "John Doe",
-          honeLines: 150,
+          phoneLines: 150,
           phoneLinesMonthlyCost: 2500,
           phoneLinesProvider: "Montana Phone",
           internetMonthlyCost: 700,
