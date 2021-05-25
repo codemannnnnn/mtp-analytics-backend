@@ -10,9 +10,9 @@ exports.seed = function (knex) {
           businessName: "Walmart",
           businessEmail: "walmart@walmart.com",
           businessAddress: "123 West Ave",
-          businessCity: 'Missoula',
-          businessState: 'Montana',
-          businessZip: 59801
+          businessCity: "Missoula",
+          businessState: "Montana",
+          businessZip: 59801,
           businessPhone: 1111111111,
           businessPoc: "John Doe",
           phoneLines: 30,
