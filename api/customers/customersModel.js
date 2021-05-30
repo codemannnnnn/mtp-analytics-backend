@@ -16,6 +16,17 @@ const create = (ex) => {
   return db("customers").insert(ex).returning("*");
 };
 
+const getInfo = (token) => {
+  return db("users").where({ id: token }).select("*");
+};
+
+const postNew = (acc) => {
+  return db("customers as c")
+    .join("users as u", "u.id", "c.user_id")
+    .insert(acc)
+    .return("*");
+};
+
 const update = (id, ex) => {
   return db("customers").where({ id: id }).first().update(ex).returning("*");
 };
@@ -31,4 +42,6 @@ module.exports = {
   create,
   update,
   remove,
+  getInfo,
+  postNew,
 };

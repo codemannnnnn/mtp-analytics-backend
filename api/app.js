@@ -9,6 +9,8 @@ const server = require("http");
 
 //import required router files
 const example = require("./example/exampleRouter");
+const auth = require("./auth/authRouter");
+const authMiddleware = require("./auth/authMiddleware");
 const users = require("./users/usersRouter");
 const customers = require("./customers/customersRouter");
 
@@ -26,8 +28,9 @@ app.use(
 
 //define routes linking with imported files
 app.use("/example", example);
-app.use("/users", users);
-app.use("/customers", customers);
+app.use("/auth", auth);
+app.use("/users", authMiddleware, users);
+app.use("/customers", authMiddleware, customers);
 
 //test api route
 app.get("/", (req, res) => {

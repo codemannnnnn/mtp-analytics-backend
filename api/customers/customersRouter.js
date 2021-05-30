@@ -3,6 +3,17 @@ const router = express.Router();
 
 const db = require("./customersModel.js");
 
+router.get("/yo", (req, res) => {
+  const token = req.headers.authorization;
+  db.getInfo(token)
+    .then((e) => {
+      res.status(200).json({ data: e });
+    })
+    .catch((err) => {
+      res.status(400).json("no");
+    });
+});
+
 router.get("/", (req, res) => {
   db.findAll()
     .then((e) => {
@@ -17,7 +28,21 @@ router.get("/:id", (req, res) => {
     .then((e) => {
       res.status(200).json(e);
     })
-    .catch((err) => res.staus(400).json(err));
+    .catch((err) => res.status(400).json(err));
+});
+
+router.post("/yo", (req, res) => {
+  const body = req.body;
+
+  try {
+    db.create(body)
+      .then((e) => {
+        res.status(200).json({ message: "New db Created", example: e[0] });
+      })
+      .catch((err) => res.status(400).json({ message: err.message }));
+  } catch {
+    res.status(401).json({ message: "Error creating the new example." });
+  }
 });
 
 router.post("/", (req, res) => {
