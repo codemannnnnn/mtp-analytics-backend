@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 router.post("/register", (req, res) => {
   const creds = req.body;
-  const rounds = process.env.BRCYPT_ROUNDS || 8;
+  const rounds = 8;
   const hash = bcryptjs.hashSync(creds.password, rounds);
   creds.password = hash;
   db.add(creds)
