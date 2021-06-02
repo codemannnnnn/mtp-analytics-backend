@@ -7,8 +7,8 @@ exports.seed = function (knex) {
       return knex("users").insert([
         {
           id: 1,
-          username: "Test1",
-          password: "password",
+          username: "bay",
+          password: "pass",
           firstName: "Bailey",
           lastName: "Branson",
           email: "bailey@bailey.com",
